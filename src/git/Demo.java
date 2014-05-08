@@ -11,7 +11,7 @@ public class Demo {
 		System.out.println(this.msg);
 	}
 	
-	public static void main(){
+	public static void main(String[] args) {
 		Demo d=new Demo();
 		d.printMSG();
 	}
