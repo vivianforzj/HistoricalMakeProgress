@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-public class TwoSum {
+public class TwoSum {//考虑使用排序
 //	public int[] twoSum(int[] numbers, int target) {
 //		//问题：当输入非常大时效率太低
 //		int[] indices = new int[2];
