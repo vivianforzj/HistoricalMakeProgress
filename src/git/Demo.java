@@ -1,7 +1,7 @@
 package git;
 
 public class Demo {
-	private String msg = "git demo";
+	private String msg = "git de";
 	
 	public Demo(){
 		this.msg = "initialized!";
