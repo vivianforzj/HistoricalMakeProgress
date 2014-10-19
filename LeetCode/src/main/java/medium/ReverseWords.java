@@ -1,4 +1,4 @@
-package medium;
+package main.java.medium;
 
 public class ReverseWords {
 

@@ -1,4 +1,4 @@
-package medium;
+package main.java.medium;
 
 import java.util.Scanner;
 import java.util.Stack;

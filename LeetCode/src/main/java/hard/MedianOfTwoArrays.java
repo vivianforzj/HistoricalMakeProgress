@@ -1,4 +1,4 @@
-package hard;
+package main.java.hard;
 
 public class MedianOfTwoArrays {
 	public double findMedianSortedArrays(int A[], int B[]) {

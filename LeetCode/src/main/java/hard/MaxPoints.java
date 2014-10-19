@@ -1,23 +1,8 @@
-package hard;
+package main.java.hard;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-
-class Point {
-	int x;
-	int y;
-
-	Point() {
-		x = 0;
-		y = 0;
-	}
-
-	Point(int a, int b) {
-		x = a;
-		y = b;
-	}
-}
 
 public class MaxPoints {
 
@@ -286,4 +271,5 @@ public class MaxPoints {
 
 		return max;
 	}
+	
 }
