@@ -1,9 +1,9 @@
-package main.java.test;
+package main.java.logback_test;
 
-import main.java.test.a.TestA;
-import main.java.test.b.TestB;
-import main.java.test.c.TestC;
-import main.java.test.d.TestD;
+import main.java.logback_test.a.TestA;
+import main.java.logback_test.b.TestB;
+import main.java.logback_test.c.TestC;
+import main.java.logback_test.d.TestD;
 
 public class Start {
 	 public static void main(String[] args) {
