@@ -1,4 +1,4 @@
-package main.java.hard;
+package hard;
 
 public class Point {
 		public static int x;

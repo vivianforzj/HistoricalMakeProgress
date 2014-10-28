@@ -1,4 +1,4 @@
-package main.java.hard;
+package hard;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;

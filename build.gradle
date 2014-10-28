@@ -1,0 +1,23 @@
+
+/* Search these repos to find artifacts. Gradle will download and cache. */
+   apply plugin: 'java'
+	apply plugin: 'eclipse'
+subprojects {
+	 apply plugin: 'java'
+	apply plugin: 'eclipse'
+	tasks.withType(JavaCompile) {
+		sourceCompatibility = "1.7"
+		targetCompatibility = "1.7"
+	}
+	repositories {
+        mavenCentral()
+    }
+    dependencies {
+   		testCompile 'junit:junit:4.8.2'
+	}
+	tasks.withType(Compile) {  
+    	options.encoding = "UTF-8"  
+	}
+}
+
+

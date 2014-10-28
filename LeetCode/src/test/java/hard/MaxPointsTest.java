@@ -1,9 +1,6 @@
-package test.java.hard;
+package hard;
 
 import static org.junit.Assert.*;
-import main.java.hard.MaxPoints;
-import main.java.hard.Point;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
 

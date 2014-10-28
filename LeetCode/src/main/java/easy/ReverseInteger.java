@@ -1,4 +1,4 @@
-package main.java.easy;
+package easy;
 
 public class ReverseInteger {
 

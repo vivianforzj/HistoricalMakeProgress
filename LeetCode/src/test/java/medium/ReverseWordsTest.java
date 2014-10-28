@@ -1,8 +1,6 @@
-package test.java.medium;
+package medium;
 
 import static org.junit.Assert.*;
-import main.java.medium.ReverseWords;
-
 import org.junit.Test;
 
 public class ReverseWordsTest {

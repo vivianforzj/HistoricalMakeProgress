@@ -1,7 +1,6 @@
-package test.java.medium;
+package medium;
 
 import static org.junit.Assert.*;
-import main.java.medium.RPNEvaluator;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
