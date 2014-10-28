@@ -1,0 +1,5 @@
+Slf4j+logback
+
+1、jar包
+2、logback.xml配置文件
+3、在eclipse中运行start.java添加参数-Dlogback.configurationFile=./config/logback.xml
