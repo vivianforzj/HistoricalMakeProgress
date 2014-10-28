@@ -3,14 +3,38 @@ package main.java.easy;
 public class StringToInteger {
 
 	public static void main(String[] args) {
-		System.out.println(new StringToInteger().atoi("-1095502506p8"));
+		System.out.println(new StringToInteger().atoiNew("-10955046576868789792506p8"));
 	}
 	
+	private int atoiNew(String str) {
+		 if (str == null || str.trim().length() == 0)
+			 return 0;
+		 str = str.trim();		 
+		 if (str.startsWith("-")) {
+			 String convertedPart = getPureString(str.substring(1));
+			 int length = convertedPart.length();
+			 long result = getNum(convertedPart, length);
+			 if (result <= Integer.MIN_VALUE) return Integer.MIN_VALUE;
+			 else return -((int)result);
+		 }  else if (Character.isDigit(str.charAt(0)) || str.startsWith("+")) {
+			 String convertedPart = null;
+			 if (Character.isDigit(str.charAt(0)))
+			 	convertedPart = getPureString(str);
+			 else
+				 convertedPart = getPureString(str.substring(1));
+			 int length = convertedPart.length();
+			 long result = getNum(convertedPart, length);
+			 if (result >= Integer.MAX_VALUE) return Integer.MAX_VALUE;
+			 else return (int) result;
+		 }
+		 return 0;
+	}
+
 	public final static String max_value = String.valueOf(Integer.MAX_VALUE);
 	public final static String min_value = String.valueOf(Integer.MIN_VALUE).substring(1);
 	public final static int max_length = max_value.length();
 	
-	 public int atoi(String str) {
+	 public int atoi(String str) {//可以直接取结果存储到long型变量中，然后再判断。此处判断各种长度神马的忒麻烦恶心了点儿╭(╯3╰)╮
 		 if (str == null || str.trim().length() == 0)
 			 return 0;
 		 str = str.trim();		 
