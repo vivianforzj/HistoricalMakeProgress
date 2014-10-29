@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	<appender name="imgservice_info"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./log/info/log.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./log/info/%d{yyyyMMdd}/log_%d{yyyyMMdd}_%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>5MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%d{yyyyMMdd HH:mm:ss SSS} %p [%t] [%F:%L] - %m%n</Pattern>
+		</encoder>
+	</appender>
+	<logger name="hello" level="INFO">
+		<appender-ref ref="imgservice_info" />
+	</logger>
+
+	<appender name="MethodsProvider"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./subPro2/log/info/log.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./subPro2/log/info/%d{yyyyMMdd}/log_%d{yyyyMMdd}_%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>5MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<Pattern>%d{yyyyMMdd HH:mm:ss SSS} %p [%t] [%F:%L] - %m%n</Pattern>
+		</encoder>
+	</appender>
+	<logger name="MethodsProvider" level="INFO">
+		<appender-ref ref="MethodsProvider" />
+	</logger>
+</configuration> 

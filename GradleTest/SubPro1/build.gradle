@@ -1,0 +1,7 @@
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+dependencies {
+	compile project(":SubPro2")
+}

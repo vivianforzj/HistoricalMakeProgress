@@ -1,0 +1,13 @@
+subprojects{
+	apply plugin: 'java'
+	apply plugin: 'eclipse'
+	
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		compile fileTree(dir: 'lib', include: '*/*.jar')
+		testCompile 'junit:junit:4.11'
+	}
+}
+

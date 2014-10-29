@@ -1,4 +1,4 @@
-package main.java.logback_test.d;
+package logback_test.d;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

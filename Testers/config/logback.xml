@@ -1,21 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration> 
 	<!-- timestamp key='bySecond' datePattern="yyyyMMdd'T'HHmmss"/-->
-    <appender name="a" class="ch.qos.logback.core.rolling.RollingFileAppender">
-       <File>./log/mylog_a_debug.log</File>
-       <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-         <FileNamePattern>./log/mylog_a_debug.%i.log</FileNamePattern>    
-         <MinIndex>1</MinIndex>    
-         <MaxIndex>5</MaxIndex>    
+    <appender name="a_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <filter class="ch.qos.logback.classic.filter.LevelFilter">
+    		<level>INFO</level>
+          	<onMatch>ACCEPT</onMatch>
+          	<onMismatch>DENY</onMismatch>
+    	</filter>
+       <File>./log/a/info/mylog.log</File>
+       <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+         <FileNamePattern>./log/a/info/%d{yyyyMMdd}/mylog-%d{yyyyMMdd}-%i.log</FileNamePattern>    
+         <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">  
+				<maxFileSize>1MB</maxFileSize>    
+			</timeBasedFileNamingAndTriggeringPolicy>   
        </rollingPolicy>  
-       <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">  
-         <MaxFileSize>2KB</MaxFileSize>    
-       </triggeringPolicy>  
        <layout class="ch.qos.logback.classic.PatternLayout">  
         <Pattern>%date [%thread] %-5level %logger{80} - %msg%n</Pattern>    
        </layout>  
     </appender>
- <logger name="main.java.test.a" level="DEBUG">  
-     <appender-ref ref="a" />
+ <logger name="logback_test.a" level="INFO">  
+     <appender-ref ref="a_info" />
+ </logger>
+ <appender name="a_error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+ 		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+    		<level>ERROR</level>
+          	<onMatch>ACCEPT</onMatch>
+          	<onMismatch>DENY</onMismatch>
+    	</filter>
+       <File>./log/a/error/mylog.log</File>
+       <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+         <FileNamePattern>./log/a/error/%d{yyyyMMdd}/mylog-%d{yyyyMMdd}-%i.log</FileNamePattern>    
+         <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">  
+				<maxFileSize>1MB</maxFileSize>    
+			</timeBasedFileNamingAndTriggeringPolicy>   
+       </rollingPolicy>  
+       <layout class="ch.qos.logback.classic.PatternLayout">  
+        <Pattern>%date [%thread] %-5level %logger{80} - %msg%n</Pattern>    
+       </layout> 
+ </appender>
+ <logger name="logback_test.a">
+ 	<appender-ref ref="a_error" />
+ </logger>
+ <appender name="c" class="ch.qos.logback.core.rolling.RollingFileAppender">
+ 	<File>./log/c/mylog.log</File>
+       <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+         <FileNamePattern>./log/c/%d{yyyyMMdd}/mylog-%d{yyyyMMdd}-%i.log</FileNamePattern>    
+         <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">  
+				<maxFileSize>1MB</maxFileSize>    
+			</timeBasedFileNamingAndTriggeringPolicy>       
+       </rollingPolicy>  
+       <layout class="ch.qos.logback.classic.PatternLayout">  
+        <Pattern>%date [%thread] %-5level %logger{80} - %msg%n</Pattern>    
+       </layout>  
+    </appender>
+    <logger name="logback_test.c" level="warn">  
+     <appender-ref ref="c" />
  </logger>
  </configuration>

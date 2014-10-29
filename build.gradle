@@ -1,7 +1,5 @@
 
 /* Search these repos to find artifacts. Gradle will download and cache. */
-   apply plugin: 'java'
-	apply plugin: 'eclipse'
 subprojects {
 	 apply plugin: 'java'
 	apply plugin: 'eclipse'
