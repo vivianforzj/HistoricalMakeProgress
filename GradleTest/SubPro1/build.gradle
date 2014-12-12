@@ -5,17 +5,3 @@ mainClassName = 'hello.HelloWorld'
 dependencies {
 	compile project(":SubPro2")
 }
-
-task copyLicense {
-    outputs.file new File("$buildDir/LICENSE")
-    doLast {
-        copy {
-            from "LICENSE"
-            into "$buildDir"
-        }
-    }
-}
- 
-applicationDistribution.from(copyLicense) {
-    into ""
-}

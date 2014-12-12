@@ -1,2 +1,2 @@
-include 'LeetCode','PlanItEarly','Testers'
+include 'LeetCode','PlanItEarly','Testers','CoprocessorTest'
 
