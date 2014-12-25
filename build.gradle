@@ -13,9 +13,9 @@ subprojects {
     dependencies {
    		testCompile 'junit:junit:4.8.2'
 	}
-	tasks.withType(Compile) {  
-    	options.encoding = "UTF-8"  
-	}
+	//tasks.withType(Compile) {
+    //	options.encoding = "UTF-8"
+	//}
 }
 
 
