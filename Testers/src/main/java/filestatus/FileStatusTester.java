@@ -25,22 +25,7 @@ public class FileStatusTester {
 		// tester.testFileLock(f);
 		// tester.testLastModified(f);
 		// tester.testBySize(f);
-		tester.testByFileOutputStream(f);
-		// tester.testByLastAccessTime(file);
-	}
-
-	public void testByLastAccessTime(String file) throws IOException,
-			InterruptedException {
-		Path path = new File(file).toPath();
-		BasicFileAttributes attr = Files.readAttributes(path,
-				BasicFileAttributes.class);
-
-		// System.out.println("creationTime: " + attr.creationTime());
-		while (true) {
-			System.out.println("lastAccessTime: " + attr.lastAccessTime());
-			Thread.sleep(1 * 1000);
-		}
-
+//		tester.testByFileOutputStream(f);
 	}
 
 	public void testByFileOutputStream(File f) {
