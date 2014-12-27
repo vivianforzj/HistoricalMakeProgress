@@ -15,9 +15,9 @@ public class FileOperator {
 		String file = "watchedDir/1.txt";
 		File f = new File(file);
 		FileOperator w = new FileOperator();
-//		w.invokeWrite(f);
+		w.invokeWrite(f);
 //		w.invokeWriteWithLock(f);
-		w.invokeRead(f);
+//		w.invokeRead(f);
 	}
 	
 	public void invokeRead(File f) throws InterruptedException, FileNotFoundException, IOException {
@@ -55,9 +55,9 @@ public class FileOperator {
 			while (i++ < 5) {
 				byte[] data = ("i = " + i + "\r\n").getBytes();
 				writer.write(data);
-				writer.flush();
 				Thread.sleep(5 * 1000);
 			}
+			writer.flush();
 			lock.release();
 		} 
 	}
