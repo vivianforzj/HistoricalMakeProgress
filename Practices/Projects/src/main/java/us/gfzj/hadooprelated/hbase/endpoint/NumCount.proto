@@ -1,0 +1,14 @@
+option java_outer_classname = "NumCountProtos";
+option java_generic_services = true;
+
+message NumCountRequest{
+	required int32 sex = 1;
+}
+
+message NumCountResponse{
+	required int64 count = 1;
+}
+
+service NumCountService{
+	rpc getNumCount(NumCountRequest) returns (NumCountResponse);
+}
