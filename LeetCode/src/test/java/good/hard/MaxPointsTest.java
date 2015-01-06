@@ -1,4 +1,4 @@
-package hard;
+package good.hard;
 
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
