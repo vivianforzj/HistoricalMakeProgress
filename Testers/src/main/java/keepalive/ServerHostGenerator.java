@@ -18,6 +18,10 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 处理配置文件中节点失效
+ *
+ */
 public class ServerHostGenerator {
 	
 	private final static Logger LOG = LoggerFactory.getLogger(ServerHostGenerator.class);
@@ -26,6 +30,8 @@ public class ServerHostGenerator {
 	
 	private final static String filepath = "conf/video_download_sever.conf";
 	private static HashMap<Integer, String> indexIpMap;
+	
+	private final static String DEFAULT_HOST = "127.0.0.1:8080";
 	
 	private static Thread thread;
 	
@@ -102,7 +108,7 @@ public class ServerHostGenerator {
 		
 		synchronized (indexIpMap) {
 			if (indexIpMap.size() == 0)
-				return null;
+				return DEFAULT_HOST;
 			
 			int index = ThreadLocalRandom.current().nextInt(0, indexIpMap.size());
 			return indexIpMap.get(index) + ":" + PORT;
