@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="personal.StringToIntegerTransformerTest" tests="9" failures="0" errors="0" timestamp="2016-03-29T08:52:41" hostname="warp-jzhou" time="0.021">
+  <properties/>
+  <testcase name="testTransformToIntNegtive" classname="personal.StringToIntegerTransformerTest" time="0.006"/>
+  <testcase name="testTransformToIntNormal" classname="personal.StringToIntegerTransformerTest" time="0.0"/>
+  <testcase name="testTransformToIntOutOfRange" classname="personal.StringToIntegerTransformerTest" time="0.01"/>
+  <testcase name="testTransformToIntNull" classname="personal.StringToIntegerTransformerTest" time="0.0"/>
+  <testcase name="testTransformToIntEmpty" classname="personal.StringToIntegerTransformerTest" time="0.0"/>
+  <testcase name="testTransformToIntZero" classname="personal.StringToIntegerTransformerTest" time="0.0"/>
+  <testcase name="testTransformToIntPositive" classname="personal.StringToIntegerTransformerTest" time="0.0"/>
+  <testcase name="testTransformToIntFloat" classname="personal.StringToIntegerTransformerTest" time="0.0"/>
+  <testcase name="testTransformToIntChar" classname="personal.StringToIntegerTransformerTest" time="0.001"/>
+  <system-out><![CDATA[String 9223372036834775807 is out of integer range
+String +344dg5 has non-number character
+String -344dg5 has non-number character
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

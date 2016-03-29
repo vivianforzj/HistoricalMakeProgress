@@ -1,0 +1,7 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="good.medium.ReverseWordsTest" tests="1" failures="0" errors="0" timestamp="2016-03-29T08:52:41" hostname="warp-jzhou" time="0.001">
+  <properties/>
+  <testcase name="testReverseWords" classname="good.medium.ReverseWordsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
