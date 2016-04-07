@@ -25,6 +25,10 @@ public class TryCatchVerifier {
             System.exit(0);
         }
     }
+    
+    public void printInfo() {
+    	System.out.println("For test");
+    }
 
     public static void main(String[] args) throws IOException {
         TryCatchVerifier verifier = new TryCatchVerifier();
